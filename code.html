@@ -65,6 +65,11 @@
             let password = document.getElementById("password").value;
             let errorMessage = document.getElementById("error-message");
 
+            function validateLogin() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let errorMessage = document.getElementById("error-message");
+
             if (username === "" || password === "") {
                 errorMessage.textContent = "Please fill in both fields.";
             } else if (username === "admin" && password === "1234") {
