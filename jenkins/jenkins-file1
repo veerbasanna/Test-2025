@@ -1,15 +1,23 @@
-pipeline{
+pipeline {
     agent any
-    tools{
+
+    tools {
         maven 'maven'
         jdk 'java'
     }
 
-    stages{
-        stage('git-checkout'){
-            steps{
+    stages {
+        stage('git-checkout') {
+            steps {
                 git branch: 'main', url: 'https://github.com/veerbasanna/Test-2025.git'
             }
         }
- }
+
+        stage('compile') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+    }
 }
+
