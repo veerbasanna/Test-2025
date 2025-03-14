@@ -8,6 +8,7 @@ pipeline{
     stages{
         stage('git-checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/ManojKRISHNAPPA/Project-movie-app.git'
+                git branch: 'main', url: 'https://github.com/veerbasanna/Test-2025.git'
             }
         }
+}
